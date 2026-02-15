@@ -26,12 +26,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-m2
       - name: Run unit tests
-        run: mvn -B test
+        run: mvn test
 #      - run: mvn test
 
       - name: Generate JaCoCo Badge
         id: jacoco
-        uses: cicirello/jacoco-badge-generator
+        uses: cicirello/jacoco-badge-generator@v3
 
       - name: Log coverage percentage
         run: |
@@ -66,7 +66,7 @@ jobs:
             ${{ runner.os }}-m2
 
       - name: Package
-        run: mvn -B package
+        run: mvn package
 
 
   publish:
