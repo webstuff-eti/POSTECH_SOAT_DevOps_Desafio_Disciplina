@@ -31,7 +31,7 @@ jobs:
 
       - name: Generate JaCoCo Badge
         id: jacoco
-        uses: webstuff-eti/jacoco-badge-generator@v2.0.1
+        uses: cicirello/jacoco-badge-generator
 
       - name: Log coverage percentage
         run: |
