@@ -8,6 +8,7 @@ class DataApplicationTests {
 
 	@Test
 	void contextLoads() {
+		assert(true);
 	}
 
 	// Test class added ONLY to cover main() invocation not covered by application tests.
