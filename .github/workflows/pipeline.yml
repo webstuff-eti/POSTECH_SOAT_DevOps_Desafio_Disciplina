@@ -19,7 +19,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -58,7 +58,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -85,10 +85,11 @@ jobs:
           #Code Review
           server-id: github
           settings-path: ${{ github.workspace }}
-          package: "*.jar"
+          #Code Review
+          #package: "*.jar"
 
         #Code Review
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
