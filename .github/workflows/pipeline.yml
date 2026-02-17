@@ -83,10 +83,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           #Code Review
-          server-id: github
-          settings-path: ${{ github.workspace }}
+          #server-id: github
+          #settings-path: ${{ github.workspace }}
           #Code Review
-          #package: "*.jar"
+          package: "*.jar"
 
         #Code Review
       - uses: actions/cache@v3
